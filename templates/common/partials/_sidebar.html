@@ -1,0 +1,36 @@
+<aside
+  class="h-full w-80 bg-black text-white p-8 border-r-8 border-red-900 flex flex-col gap-8"
+>
+  <div class="flex flex-col items-center mb-4">
+    <h1 class="text-4xl font-medium mb-2">HIDROTEC</h1>
+    <h2 class="text-xl">Soluções Hidráulicas</h2>
+  </div>
+  <div class="flex-1">
+    <ul class="font-medium flex flex-col gap-12 text-xl">
+      <li>
+        <i class="far fa-user"></i>
+        <a class="ml-2" href="{% url 'dashboard' %}">Página Inicial</a>
+      </li>
+      <li>
+        <i class="far fa-folder-open"></i>
+        <a class="ml-2" href="{% url 'notes' %}">Emissão de Notas</a>
+      </li>
+      <li>
+        <i class="far fa-file-alt"></i>
+        <a class="ml-2" href="{% url 'reports' %}">Relatórios</a>
+      </li>
+      <li>
+        <i class="fas fa-coins"></i>
+        <a class="ml-2" href="{% url 'calculation' %}">Cálculo de Valores</a>
+      </li>
+      <li>
+        <i class="far fa-comment-alt"></i>
+        <a class="ml-2" href="{% url 'support' %}">Suporte</a>
+      </li>
+    </ul>
+  </div>
+  <div class="text-xl pb-4 justify-center">
+    <i class="fas fa-power-off"></i>
+    <a class="ml-2" href="{% url 'login' %}">Sair</a>
+  </div>
+</aside>
