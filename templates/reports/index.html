@@ -1,10 +1,25 @@
 {% extends 'common/base.html' %} {% block content %}
 
 <div>
-  <h2 class="text-3xl font-bold">Relatórios</h2>
-  <div
-    class="flex-1 flex flex-col items-center justify-center w-full h-full"
-  ></div>
+  <h2 class="text-3xl font-semibold">Relatórios</h2>
+  <div class="flex align-center justify-between my-8">
+    <div class="flex gap-6 flex-1 align-items">
+      <h2 class="text-3xl font-medium">Nome</h2>
+      <input
+        class="py-2 px-4 rounded-lg border focus:outline-red-900 w-96"
+        id="search"
+        name="search"
+        type="search"
+        placeholder="Digite o nome do relatório que deseja"
+      />
+      <button
+        class="py-2 px-6 rounded-lg text-center bg-black text-white font-medium self-center"
+        type="submit"
+      >
+        OK
+      </button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

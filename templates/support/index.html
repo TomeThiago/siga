@@ -1,10 +1,25 @@
 {% extends 'common/base.html' %} {% block content %}
 
-<div>
-  <h2 class="text-3xl font-bold">Abrir Chamado de Suporte</h2>
-  <div
-    class="flex-1 flex flex-col items-center justify-center w-full h-full"
-  ></div>
+<div class="flex flex-col w-full h-full">
+  <div class="flex align-center justify-between mb-4">
+    <h2 class="text-3xl font-semibold">Abrir Chamado de Suporte</h2>
+    <button
+      class="py-2 px-4 rounded-lg text-center bg-black text-white font-medium self-center"
+      type="submit"
+    >
+      Abrir Chamado
+    </button>
+  </div>
+
+  <form class="w-full h-full flex flex-col gap-4">
+    <textarea
+      id="description"
+      name="description"
+      cols="33"
+      placeholder="Digite o motivo da abertura do chamada"
+      class="flex flex-1 border border-grey-500 outline-none p-2 rounded"
+    ></textarea>
+  </form>
 </div>
 
 {% endblock %}
