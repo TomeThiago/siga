@@ -1,3 +1,7 @@
 from django.contrib import admin
+from support.models import Suporte
 
-# Register your models here.
+class ListReports(admin.ModelAdmin):
+  list_display = ("id", "descricao")
+  
+admin.site.register(Suporte, ListReports)

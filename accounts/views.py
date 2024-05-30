@@ -6,9 +6,6 @@ from django.contrib.auth import login as login_django
 from django.contrib.auth import logout as logout_django
 
 def login(request):
-  # if request.user:
-  #   return HttpResponseRedirect(redirect_to="/dashbord")
-  
   if request.method == 'GET':
     return render(request, 'accounts/login.html')
   elif request.method == 'POST':

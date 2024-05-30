@@ -1,0 +1,62 @@
+{% extends 'common/base.html' %} {% block content %}
+
+<div>
+  <h2 class="text-3xl font-semibold">Lista de Clientes</h2>
+  <div class="flex align-center justify-between my-8">
+    <div class="flex gap-6 flex-1 align-items">
+      <input
+        class="py-2 px-4 rounded-lg border focus:outline-red-900 w-96"
+        id="search"
+        name="search"
+        type="search"
+        placeholder="Digite o ID do cliente"
+      />
+      <button
+        class="py-2 px-6 rounded-lg text-center bg-black text-white font-medium self-center"
+        type="submit"
+      >
+        Buscar
+      </button>
+    </div>
+    <div>
+      <div class="flex gap-4">
+        <button
+          class="flex py-2 px-4 rounded-lg text-center bg-gray-300 font-light items-center gap-2"
+        >
+          <i class="fas fa-download"></i>
+          Download
+        </button>
+        <button
+          class="flex py-2 px-4 rounded-lg text-center bg-gray-300 font-light items-center gap-2"
+        >
+          <i class="fas fa-print"></i>
+          Imprimir
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white border rounded p-4">
+    <div class="drop-shadow-md">
+      <table class="w-full mb-4">
+        <tr class="text-left">
+          <th class="p-2">ID</th>
+          <th class="p-2">Nome</th>
+          <th class="p-2">Email</th>
+          <th class="p-2">Endereço</th>
+          <th class="p-2">Telefone</th>
+        </tr>
+        {% if clientes %} {% for cliente in clientes %}
+        <tr class="p-2">
+          <td class="p-2">{{ cliente.id }}</td>
+          <td class="p-2">{{ cliente.nome }}</td>
+          <td class="p-2">{{ cliente.email }}</td>
+          <td class="p-2">{{ cliente.endereco }}</td>
+          <td class="p-2">{{ cliente.telefone }}</td>
+        </tr>
+        {% endfor %} {% else %} {% endif %}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
